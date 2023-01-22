@@ -1,10 +1,24 @@
+// import React from "react";
+// import { graphql } from "gatsby";
+
+// import { MDXProvider } from "@mdx-js/react";
+
+// export default function Tempate({ data: mdx }) {
+//     const { frontmatter,body } = mdx;
+
+//   return (
+//     <>
+//       <h2>{frontmatter.date}</h2>
+//       <MDXProvider>{body}</MDXProvider>
+//     </>
+//   );
+// }
+
 import React from "react";
 import { graphql } from "gatsby";
 import Layout from "../components/layout";
-import { MDXProvider } from "@mdx-js/react";
+import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx";
-
-
 
 const MyH1 = (props) => <h1 style={{ color: `tomato` }} {...props} />;
 const MyParagraph = (props) => (
@@ -12,11 +26,10 @@ const MyParagraph = (props) => (
 );
 
 export default function BlogPostTemplate({
-  data: { mdx } 
+  data: { mdx } ,children
 }) {
   // const { mdx } = data; // data.mdx holds your post data
   const { frontmatter,body } = mdx;
-
 
   const components = {
     h1: MyH1,
@@ -29,13 +42,15 @@ export default function BlogPostTemplate({
         {/* <h2>{frontmatter.date}</h2> */}
         <>
           <h1>{frontmatter.title}</h1>
-          <MDXProvider components={components}>
-            {/* <MDXRenderer> */}
+          <MDXProvider >
+          {body}
+          {children}
+          </MDXProvider>
+{/*
+            <MDXRenderer>
             {body}
 
-            {/* </MDXRenderer> */}
-          </MDXProvider>
-          
+            </MDXRenderer> */}
 
         </>
 

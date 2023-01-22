@@ -12,7 +12,7 @@ const Tags = ({ pageContext, data }) => {
     <Layout >
       <main>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
-          {data.allmdx.edges.map(({ node }) => (
+          {data.allMdx.edges.map(({ node }) => (
             <CardPreview data={node} key={node.fields.slug} />
           ))}
         </div>

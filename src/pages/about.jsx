@@ -1,7 +1,7 @@
 import * as React from "react";
 import "../styles/global.css";
 import Layout from "../components/layout";
-const aboutabout = ({ data }) => {
+const About = ({ data }) => {
   return (
     <Layout titulo="ABOUT">
       <main className="max-w-[75%] mx-auto text-justify">
@@ -19,7 +19,7 @@ Busco combinar mis saberes de programación orientados al LiveCoding con prácti
   );
 };
 
-export default about;
+export default About;
 
 export const Head = () => {
   return  <>

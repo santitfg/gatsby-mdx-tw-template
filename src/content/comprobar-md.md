@@ -4,7 +4,6 @@ title: "comprobar-md"
 tags: ["es", "hydra", programacion"]
 image: img/desbastes/yeso.jpg
 layout: "template"
-
 ---
 
 # esto es un markdown

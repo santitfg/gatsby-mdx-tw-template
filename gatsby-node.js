@@ -27,6 +27,9 @@ exports.createPages = ({ graphql, actions }) => {
       ) {        
         edges {
           node {
+            internal {
+              contentFilePath
+            }
             fields {
               slug
             }
@@ -58,10 +61,8 @@ exports.createPages = ({ graphql, actions }) => {
     posts.forEach(({ node }) => {
       createPage({
         path: node.fields.slug,
-        component: path.resolve(
-          // `./src/templates/template.jsx`
-          `./src/templates/${node.frontmatter.layout || "template"}.jsx`
-        ),
+        component: path.resolve(`./src/templates/${node.frontmatter.layout || "template"}.jsx`),
+  // component: node.internal.contentFilePath,
         context: {
           slug: node.fields.slug,
         },
