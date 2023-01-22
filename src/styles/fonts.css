@@ -1,0 +1,37 @@
+/* https://github.com/ben-rogerson/twin.macro/issues/603 */
+@layer base{
+    @font-face {
+        font-style: normal;
+        font-weight: 400;
+        font-family: "chivo";
+        src: url("../assets/fonts/Chivo-Regular.woff2") format("wof2");
+    }
+}
+
+@layer base{
+    @font-face {
+        font-style: italic;
+        font-weight: 400;
+        font-family: "chivo";
+        src: url("../assets/fonts/Chivo-Italic.woff2") format("wof2");
+    }
+}
+
+
+@layer base{
+    @font-face {
+        font-style: normal;
+        font-weight: 400;
+        font-family: "leluja";
+        src: url("../assets/fonts/LelujaOriginal-Regular.woff2") format("wof2");
+    }
+}
+
+@layer base{
+    @font-face {
+        font-style: italic;
+        font-weight: 400;
+        font-family: "leluja";
+        src: url("../assets/fonts/LelujaOriginal-Italic.woff2") format("wof2");
+    }
+}
