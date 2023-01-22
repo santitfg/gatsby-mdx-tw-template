@@ -14,7 +14,7 @@ const CardPreview = (props) => {
       // <div      className="relative object-cover pb-1/2 ">
         <GatsbyImage
           className="  w-full h-full object-cover rounded-none md:rounded-3xl  "
-          image={data.frontmatter.image.childImageSharp.gatsbyImageData}
+          // image={data.frontmatter.image.childImageSharp.gatsbyImageData}
           alt={data.frontmatter.title}
         />
       //  </div> 
